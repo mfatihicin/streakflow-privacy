@@ -3,99 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StreakFlow — FAQ / Sıkça Sorulan Sorular</title>
+  <title>StreakFlow — FAQ</title>
   <style>
+    :root {
+      --bg: #ffffff; --text: #1a1a1a; --text-muted: #666; 
+      --primary: #4CAF50; --border: #e5e5ea; --select-bg: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000; --text: #f5f5f7; --text-muted: #8e8e93; 
+        --primary: #32d74b; --border: #38383a; --select-bg: #1c1c1e;
+      }
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #1A1A2E;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg); color: var(--text);
+      max-width: 700px; margin: 0 auto; padding: 50px 24px; line-height: 1.6;
     }
-    h1 { color: #4CAF50; font-size: 28px; margin-bottom: 8px; }
-    p.subtitle { color: #888; font-size: 15px; margin-bottom: 30px; }
+    h1 { font-size: 32px; margin-bottom: 8px; font-weight: 800; }
+    p.subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
     
-    /* Dil Seçici Tasarımı */
     .language-selector {
-      margin-bottom: 40px;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      background-color: #f9f9f9;
-      width: 100%;
-      max-width: 300px;
-      outline: none;
-      cursor: pointer;
+      margin-bottom: 40px; padding: 14px 16px; font-size: 16px; font-weight: 500;
+      border-radius: 12px; border: 1px solid var(--border);
+      background-color: var(--select-bg); color: var(--text);
+      width: 100%; max-width: 100%; outline: none; cursor: pointer;
+      appearance: none; -webkit-appearance: none;
     }
-
-    /* Soru ve Cevap Tasarımı */
-    .faq-container { display: none; animation: fadeIn 0.3s; }
+    
+    .faq-container { display: none; animation: fadeIn 0.4s ease-in-out; }
     .faq-container.active { display: block; }
-    .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eaeaea; }
-    .question { font-weight: 600; font-size: 18px; color: #333; margin-bottom: 8px; }
-    .answer { color: #555; font-size: 15px; }
+    .faq-item { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .question { font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .answer { color: var(--text-muted); font-size: 15px; }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h1>🔥 StreakFlow FAQ</h1>
-  <p class="subtitle">Frequently Asked Questions / Sıkça Sorulan Sorular</p>
+  <h1>StreakFlow FAQ</h1>
+  <p class="subtitle">Frequently Asked Questions & Help Center</p>
 
-  <!-- Dil Seçim Menüsü -->
+  <!-- 10 Language Selector -->
   <select id="langSelect" class="language-selector">
     <option value="en">🇬🇧 English</option>
     <option value="tr">🇹🇷 Türkçe</option>
-    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
     <option value="fr">🇫🇷 Français</option>
-    <!-- İstersen diğer dilleri de buraya ekleyebilirsin -->
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="ja">🇯🇵 日本語 (Japanese)</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="ru">🇷🇺 Русский (Russian)</option>
+    <option value="zh">🇨🇳 中文 (Chinese)</option>
   </select>
 
-  <!-- 🇬🇧 İNGİLİZCE BÖLÜMÜ (Varsayılan olarak açık) -->
+  <!-- 🇬🇧 ENGLISH -->
   <div id="faq-en" class="faq-container active">
-    
     <div class="faq-item">
       <div class="question">How do I add a new habit?</div>
       <div class="answer">Tap the "+" button on the main screen, choose your habit type (Check, Timer, or Counter), set your goal, and save.</div>
     </div>
-    
     <div class="faq-item">
-      <div class="question">How does the Apple Watch app sync?</div>
-      <div class="answer">The synchronization is instant and automatic. Any changes you make on your watch will immediately appear on your iPhone.</div>
+      <div class="question">How does the Apple Watch / Wear OS app sync?</div>
+      <div class="answer">The synchronization is instant and automatic. Any changes you make on your watch will immediately appear on your phone.</div>
     </div>
-
+    <div class="faq-item">
+      <div class="question">How can I backup my data?</div>
+      <div class="answer">Go to Settings > Data section and tap "Backup Data". This feature requires a Premium subscription.</div>
+    </div>
   </div>
 
-  <!-- 🇹🇷 TÜRKÇE BÖLÜMÜ -->
+  <!-- 🇹🇷 TÜRKÇE -->
   <div id="faq-tr" class="faq-container">
-    
     <div class="faq-item">
       <div class="question">Yeni bir alışkanlığı nasıl eklerim?</div>
       <div class="answer">Ana ekrandaki "+" butonuna dokunun, alışkanlık türünüzü seçin (Onay, Sayaç veya Zamanlayıcı), hedefinizi belirleyin ve kaydedin.</div>
     </div>
-    
     <div class="faq-item">
-      <div class="question">Apple Watch uygulaması nasıl senkronize olur?</div>
-      <div class="answer">Senkronizasyon anında ve otomatiktir. Saatinizde yaptığınız her değişiklik anında iPhone'unuza yansır.</div>
+      <div class="question">Akıllı saat uygulaması nasıl senkronize olur?</div>
+      <div class="answer">Senkronizasyon anında ve otomatiktir. Saatinizde yaptığınız her değişiklik anında telefonunuza yansır.</div>
     </div>
-
-  </div>
-
-  <!-- 🇪🇸 İSPANYOLCA BÖLÜMÜ -->
-  <div id="faq-es" class="faq-container">
     <div class="faq-item">
-      <div class="question">¿Cómo agrego un nuevo hábito?</div>
-      <div class="answer">Toca el botón "+" en la pantalla principal, elige tu tipo de hábito, establece tu objetivo y guarda.</div>
+      <div class="question">Verilerimi nasıl yedeklerim?</div>
+      <div class="answer">Ayarlar > Veri bölümüne gidin ve "Verileri Yedekle" seçeneğine dokunun. Bu özellik Premium abonelik gerektirir.</div>
     </div>
   </div>
 
-  <!-- 🇫🇷 FRANSIZCA BÖLÜMÜ -->
+  <!-- 🇩🇪 DEUTSCH -->
+  <div id="faq-de" class="faq-container">
+    <div class="faq-item">
+      <div class="question">Wie füge ich eine neue Gewohnheit hinzu?</div>
+      <div class="answer">Tippen Sie auf die Schaltfläche "+" auf dem Hauptbildschirm, wählen Sie Ihren Gewohnheitstyp, legen Sie Ihr Ziel fest und speichern Sie.</div>
+    </div>
+  </div>
+
+  <!-- 🇫🇷 FRANÇAIS -->
   <div id="faq-fr" class="faq-container">
     <div class="faq-item">
       <div class="question">Comment ajouter une nouvelle habitude ?</div>
@@ -103,18 +111,60 @@
     </div>
   </div>
 
-  <!-- SİHİRLİ JAVASCRIPT KODU (Diller arası geçişi sağlar) -->
+  <!-- 🇪🇸 ESPAÑOL -->
+  <div id="faq-es" class="faq-container">
+    <div class="faq-item">
+      <div class="question">¿Cómo agrego un nuevo hábito?</div>
+      <div class="answer">Toca el botón "+" en la pantalla principal, elige tu tipo de hábito, establece tu objetivo y guarda.</div>
+    </div>
+  </div>
+  
+  <!-- 🇮🇹 ITALIANO -->
+  <div id="faq-it" class="faq-container">
+    <div class="faq-item">
+      <div class="question">Come aggiungo una nuova abitudine?</div>
+      <div class="answer">Tocca il pulsante "+" nella schermata principale, scegli il tipo di abitudine, imposta il tuo obiettivo e salva.</div>
+    </div>
+  </div>
+
+  <!-- 🇯🇵 JAPANESE -->
+  <div id="faq-ja" class="faq-container">
+    <div class="faq-item">
+      <div class="question">新しい習慣を追加するにはどうすればよいですか？</div>
+      <div class="answer">メイン画面の「+」ボタンをタップし、習慣のタイプを選択して目標を設定し、保存します。</div>
+    </div>
+  </div>
+
+  <!-- 🇵🇹 PORTUGUESE -->
+  <div id="faq-pt" class="faq-container">
+    <div class="faq-item">
+      <div class="question">Como adiciono um novo hábito?</div>
+      <div class="answer">Toque no botão "+" na tela principal, escolha o tipo de hábito, defina sua meta e salve.</div>
+    </div>
+  </div>
+
+  <!-- 🇷🇺 RUSSIAN -->
+  <div id="faq-ru" class="faq-container">
+    <div class="faq-item">
+      <div class="question">Как добавить новую привычку?</div>
+      <div class="answer">Нажмите кнопку «+» на главном экране, выберите тип привычки, установите цель и сохраните.</div>
+    </div>
+  </div>
+
+  <!-- 🇨🇳 CHINESE -->
+  <div id="faq-zh" class="faq-container">
+    <div class="faq-item">
+      <div class="question">如何添加新习惯？</div>
+      <div class="answer">点击主屏幕上的“+”按钮，选择您的习惯类型，设定您的目标，然后保存。</div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('langSelect').addEventListener('change', function(e) {
-      // 1. Tüm FAQ bölümlerini gizle
-      var containers = document.querySelectorAll('.faq-container');
-      containers.forEach(function(container) {
+      document.querySelectorAll('.faq-container').forEach(function(container) {
         container.classList.remove('active');
       });
-      
-      // 2. Sadece seçilen dilin bölümünü göster
-      var selectedLang = e.target.value;
-      document.getElementById('faq-' + selectedLang).classList.add('active');
+      document.getElementById('faq-' + e.target.value).classList.add('active');
     });
   </script>
 
