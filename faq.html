@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreakFlow — FAQ / Sıkça Sorulan Sorular</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #1A1A2E;
+      line-height: 1.7;
+    }
+    h1 { color: #4CAF50; font-size: 28px; margin-bottom: 8px; }
+    p.subtitle { color: #888; font-size: 15px; margin-bottom: 30px; }
+    
+    /* Dil Seçici Tasarımı */
+    .language-selector {
+      margin-bottom: 40px;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      width: 100%;
+      max-width: 300px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Soru ve Cevap Tasarımı */
+    .faq-container { display: none; animation: fadeIn 0.3s; }
+    .faq-container.active { display: block; }
+    .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eaeaea; }
+    .question { font-weight: 600; font-size: 18px; color: #333; margin-bottom: 8px; }
+    .answer { color: #555; font-size: 15px; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 StreakFlow FAQ</h1>
+  <p class="subtitle">Frequently Asked Questions / Sıkça Sorulan Sorular</p>
+
+  <!-- Dil Seçim Menüsü -->
+  <select id="langSelect" class="language-selector">
+    <option value="en">🇬🇧 English</option>
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="fr">🇫🇷 Français</option>
+    <!-- İstersen diğer dilleri de buraya ekleyebilirsin -->
+  </select>
+
+  <!-- 🇬🇧 İNGİLİZCE BÖLÜMÜ (Varsayılan olarak açık) -->
+  <div id="faq-en" class="faq-container active">
+    
+    <div class="faq-item">
+      <div class="question">How do I add a new habit?</div>
+      <div class="answer">Tap the "+" button on the main screen, choose your habit type (Check, Timer, or Counter), set your goal, and save.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="question">How does the Apple Watch app sync?</div>
+      <div class="answer">The synchronization is instant and automatic. Any changes you make on your watch will immediately appear on your iPhone.</div>
+    </div>
+
+  </div>
+
+  <!-- 🇹🇷 TÜRKÇE BÖLÜMÜ -->
+  <div id="faq-tr" class="faq-container">
+    
+    <div class="faq-item">
+      <div class="question">Yeni bir alışkanlığı nasıl eklerim?</div>
+      <div class="answer">Ana ekrandaki "+" butonuna dokunun, alışkanlık türünüzü seçin (Onay, Sayaç veya Zamanlayıcı), hedefinizi belirleyin ve kaydedin.</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="question">Apple Watch uygulaması nasıl senkronize olur?</div>
+      <div class="answer">Senkronizasyon anında ve otomatiktir. Saatinizde yaptığınız her değişiklik anında iPhone'unuza yansır.</div>
+    </div>
+
+  </div>
+
+  <!-- 🇪🇸 İSPANYOLCA BÖLÜMÜ -->
+  <div id="faq-es" class="faq-container">
+    <div class="faq-item">
+      <div class="question">¿Cómo agrego un nuevo hábito?</div>
+      <div class="answer">Toca el botón "+" en la pantalla principal, elige tu tipo de hábito, establece tu objetivo y guarda.</div>
+    </div>
+  </div>
+
+  <!-- 🇫🇷 FRANSIZCA BÖLÜMÜ -->
+  <div id="faq-fr" class="faq-container">
+    <div class="faq-item">
+      <div class="question">Comment ajouter une nouvelle habitude ?</div>
+      <div class="answer">Appuyez sur le bouton "+" sur l'écran principal, choisissez votre type d'habitude, fixez votre objectif et enregistrez.</div>
+    </div>
+  </div>
+
+  <!-- SİHİRLİ JAVASCRIPT KODU (Diller arası geçişi sağlar) -->
+  <script>
+    document.getElementById('langSelect').addEventListener('change', function(e) {
+      // 1. Tüm FAQ bölümlerini gizle
+      var containers = document.querySelectorAll('.faq-container');
+      containers.forEach(function(container) {
+        container.classList.remove('active');
+      });
+      
+      // 2. Sadece seçilen dilin bölümünü göster
+      var selectedLang = e.target.value;
+      document.getElementById('faq-' + selectedLang).classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
