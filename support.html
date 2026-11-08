@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StreakFlow Help Center</title>
+  <title>StreakFlow — Destek / Help Center</title>
   <style>
     :root {
-      --bg: #ffffff; --text: #1a1a1a; --text-muted: #666; 
+      --bg: #ffffff; --text: #1a1a1a; --text-muted: #666;
       --primary: #4CAF50; --card: #f5f5f7; --border: #e5e5ea;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #000000; --text: #f5f5f7; --text-muted: #8e8e93; 
+        --bg: #000000; --text: #f5f5f7; --text-muted: #8e8e93;
         --primary: #32d74b; --card: #1c1c1e; --border: #38383a;
       }
     }
@@ -23,7 +23,9 @@
     }
     .icon { font-size: 48px; margin-bottom: 16px; }
     h1 { font-size: 28px; margin-bottom: 8px; font-weight: 700; }
-    p { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+    h2 { font-size: 20px; margin: 40px 0 12px; }
+    p { color: var(--text-muted); font-size: 16px; margin-bottom: 24px; }
+    a { color: var(--primary); text-decoration: none; }
     .card {
       background-color: var(--card); border: 1px solid var(--border);
       border-radius: 16px; padding: 24px; margin-bottom: 16px;
@@ -34,34 +36,99 @@
     .card-content h3 { margin: 0 0 4px 0; font-size: 18px; }
     .card-content span { color: var(--text-muted); font-size: 14px; }
     .arrow { color: var(--text-muted); font-weight: bold; }
+    .legal { text-align: left; background-color: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); }
+    .legal p { font-size: 14px; margin: 0 0 6px; }
+    .date { font-size: 13px; color: var(--text-muted); }
+    .lang { font-size: 14px; margin-bottom: 24px; }
     .footer { margin-top: 48px; font-size: 13px; color: var(--text-muted); }
+    .footer p { font-size: 13px; margin-bottom: 8px; }
   </style>
 </head>
 <body>
+  <div class="lang"><a href="#tr">Türkçe</a> · <a href="#en">English</a></div>
 
-  <div class="icon">💬</div>
-  <h1>How can we help you?</h1>
-  <p>Choose an option below to find answers or get in touch with the StreakFlow team.</p>
+  <!-- TÜRKÇE -->
+  <section id="tr">
+    <div class="icon">💬</div>
+    <h1>Nasıl yardımcı olabiliriz?</h1>
+    <p>Sık sorulan soruların cevaplarına bak ya da StreakFlow geliştiricisine doğrudan yaz.</p>
 
-  <a href="faq.html" class="card">
-    <div class="card-content">
-      <h3>📚 Frequently Asked Questions</h3>
-      <span>Find quick answers to common issues</span>
+    <a href="faq.html" class="card">
+      <div class="card-content">
+        <h3>📚 Sık Sorulan Sorular</h3>
+        <span>Yaygın sorunların hızlı cevapları</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <a href="mailto:support@mfatihicin.com?subject=StreakFlow%20Destek" class="card">
+      <div class="card-content">
+        <h3>✉️ Destek ile iletişim</h3>
+        <span>support@mfatihicin.com</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <a href="mailto:support@mfatihicin.com?subject=StreakFlow%20%E2%80%93%20Veri%20talebi" class="card">
+      <div class="card-content">
+        <h3>🔒 Verilerim hakkında talep (KVKK/GDPR)</h3>
+        <span>Erişim, düzeltme, silme veya itiraz. Uygulamada: Ayarlar › Gizlilik › Veri talebi. 30 gün içinde ücretsiz cevaplanır.</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <div class="legal">
+      <p><strong>Veri sorumlusu ve geliştirici:</strong> Mehmet Fatih İçin (gerçek kişi, bağımsız uygulama geliştiricisi, Türkiye)</p>
+      <p><strong>E-posta:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></p>
+      <p><strong>Yazışma adresi / KEP:</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</p>
+      <p><strong>İnternet sitesi:</strong> <a href="https://mfatihicin.com">https://mfatihicin.com</a></p>
+      <p><a href="index.html">Gizlilik Politikası</a> · <a href="kvkk.html">KVKK Aydınlatma Metni</a> · <a href="termsofuse.html">Kullanım Koşulları</a></p>
+      <p class="date">Son güncelleme: 8 Kasım 2026 — iletişim adresi support@mfatihicin.com oldu; yasal bilgiler ve KVKK bağlantısı eklendi.</p>
     </div>
-    <div class="arrow">➔</div>
-  </a>
+  </section>
 
-  <a href="mailto:mfatihicin@gmail.com?subject=StreakFlow%20Support" class="card">
-    <div class="card-content">
-      <h3>✉️ Contact Support</h3>
-      <span>Email us directly at mfatihicin@gmail.com</span>
+  <!-- ENGLISH -->
+  <section id="en">
+    <h2>How can we help you?</h2>
+    <p>Find quick answers or write to the StreakFlow developer directly.</p>
+
+    <a href="faq.html" class="card">
+      <div class="card-content">
+        <h3>📚 Frequently Asked Questions</h3>
+        <span>Quick answers to common issues</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <a href="mailto:support@mfatihicin.com?subject=StreakFlow%20Support" class="card">
+      <div class="card-content">
+        <h3>✉️ Contact Support</h3>
+        <span>support@mfatihicin.com</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <a href="mailto:support@mfatihicin.com?subject=StreakFlow%20%E2%80%93%20Data%20request" class="card">
+      <div class="card-content">
+        <h3>🔒 Request about my data (KVKK/GDPR)</h3>
+        <span>Access, correction, deletion or objection. In the app: Settings › Privacy › Contact about my data. Answered free of charge within 30 days.</span>
+      </div>
+      <div class="arrow">➔</div>
+    </a>
+
+    <div class="legal">
+      <p><strong>Data controller &amp; developer:</strong> Mehmet Fatih İçin (natural person, independent app developer, Türkiye)</p>
+      <p><strong>E-mail:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></p>
+      <p><strong>Postal address / KEP (registered e-mail):</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</p>
+      <p><strong>Website:</strong> <a href="https://mfatihicin.com">https://mfatihicin.com</a></p>
+      <p><a href="index.html">Privacy Policy</a> · <a href="kvkk.html">KVKK Notice</a> · <a href="termsofuse.html">Terms of Use</a></p>
+      <p class="date">Last updated: 8 November 2026 — contact address is now support@mfatihicin.com; legal information and KVKK link added.</p>
     </div>
-    <div class="arrow">➔</div>
-  </a>
+  </section>
 
   <div class="footer">
-    &copy; 2026 StreakFlow. All rights reserved.
+    <p>© 2026 StreakFlow · Veri sorumlusu ve geliştirici: Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="index.html">Gizlilik</a> · <a href="kvkk.html">KVKK Aydınlatma Metni</a> · <a href="termsofuse.html">Kullanım Koşulları</a> · <a href="support.html">Destek</a> · <a href="faq.html">SSS</a></p>
+    <p>© 2026 StreakFlow · Data controller &amp; developer: Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="index.html">Privacy</a> · <a href="kvkk.html">KVKK Notice</a> · <a href="termsofuse.html">Terms</a> · <a href="support.html">Support</a> · <a href="faq.html">FAQ</a></p>
   </div>
-
 </body>
 </html>

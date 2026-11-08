@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StreakFlow — FAQ</title>
+  <title>StreakFlow — SSS / FAQ</title>
   <style>
     :root {
       --bg: #ffffff; --text: #1a1a1a; --text-muted: #666; 
@@ -37,6 +37,9 @@
     .faq-item:last-child { border-bottom: none; }
     .question { font-weight: 700; font-size: 18px; margin-bottom: 8px; }
     .answer { color: var(--text-muted); font-size: 15px; }
+    a { color: var(--primary); text-decoration: none; }
+    .nav { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+    .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -46,8 +49,9 @@
 </head>
 <body>
 
+  <div class="nav"><a href="index.html">Gizlilik / Privacy</a> · <a href="kvkk.html">KVKK Aydınlatma Metni / KVKK Notice</a> · <a href="termsofuse.html">Koşullar / Terms</a> · <a href="support.html">Destek / Support</a> · <a href="faq.html">SSS / FAQ</a></div>
   <h1>StreakFlow FAQ</h1>
-  <p class="subtitle">Frequently Asked Questions & Help Center</p>
+  <p class="subtitle">Frequently Asked Questions & Help Center · Sık Sorulan Sorular<br><small>Son güncelleme / Last updated: 8 November 2026 — Premium is a one-time purchase (not a subscription); privacy answers added; contact: support@mfatihicin.com.</small></p>
 
   <!-- 10 Language Selector -->
   <select id="langSelect" class="language-selector">
@@ -71,11 +75,19 @@
     </div>
     <div class="faq-item">
       <div class="question">How does the Apple Watch / Wear OS app sync?</div>
-      <div class="answer">The synchronization is instant and automatic. Any changes you make on your watch will immediately appear on your phone.</div>
+      <div class="answer">Sync is automatic while your watch is paired and connected to your phone. Changes on one device appear on the other through the operating system's phone–watch connection; the data never goes through our servers.</div>
     </div>
     <div class="faq-item">
       <div class="question">How can I backup my data?</div>
-      <div class="answer">Go to Settings > Data section and tap "Backup Data". This feature requires a Premium subscription.</div>
+      <div class="answer">Go to Settings > Data section and tap "Backup Data" (a Premium feature; Premium is a one-time purchase, not a subscription). The file is saved wherever you choose. On Android, if Google backup is on, your habit data (not photos) is also included in the backup in your own Google account; on iPhone, your iCloud or computer backup may include it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Where is my data stored? Can you see it?</div>
+      <div class="answer">StreakFlow has no account and no server of ours. Your habits, mood entries and photos stay on your device (and in your own device backups). Step and water data from Apple Health / Health Connect is processed only on your device and is never sent to us or used for ads. The free version shows ads through Unity LevelPlay, which processes device data such as your advertising ID and IP address. Details: <a href="index.html">Privacy Policy</a> · <a href="kvkk.html">KVKK Notice</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">How do I delete my data or turn off personalized ads?</div>
+      <div class="answer">Settings › Delete All Data deletes everything on the device (uninstalling also does). For ads, choose "non-personalized" in Settings › Privacy Options; on iPhone you can also change the tracking permission in iOS Settings. For any privacy request write to <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a>.</div>
     </div>
   </div>
 
@@ -87,11 +99,19 @@
     </div>
     <div class="faq-item">
       <div class="question">Akıllı saat uygulaması nasıl senkronize olur?</div>
-      <div class="answer">Senkronizasyon anında ve otomatiktir. Saatinizde yaptığınız her değişiklik anında telefonunuza yansır.</div>
+      <div class="answer">Saatiniz telefonunuzla eşleşmiş ve bağlıyken eşitleme otomatiktir. Bir cihazda yaptığınız değişiklik, işletim sisteminin telefon–saat bağlantısıyla diğerine yansır; veriler bizim sunucumuzdan geçmez.</div>
     </div>
     <div class="faq-item">
       <div class="question">Verilerimi nasıl yedeklerim?</div>
-      <div class="answer">Ayarlar > Veri bölümüne gidin ve "Verileri Yedekle" seçeneğine dokunun. Bu özellik Premium abonelik gerektirir.</div>
+      <div class="answer">Ayarlar > Veri bölümüne gidin ve "Verileri Yedekle" seçeneğine dokunun (Premium özelliğidir; Premium abonelik değil, tek seferlik satın almadır). Dosya, sizin seçtiğiniz yere kaydedilir. Android'de Google yedeklemesi açıksa alışkanlık verileriniz (fotoğraflar hariç) kendi Google hesabınızdaki yedeğe de girer; iPhone'da iCloud veya bilgisayar yedeğiniz bu verileri kapsayabilir.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Verilerim nerede saklanıyor? Siz görebiliyor musunuz?</div>
+      <div class="answer">StreakFlow'da hesap ve bize ait sunucu yoktur. Alışkanlıklarınız, ruh hali kayıtlarınız ve fotoğraflarınız cihazınızda (ve kendi cihaz yedeklerinizde) kalır. Apple Sağlık / Health Connect'ten gelen adım ve su verileri yalnızca cihazınızda işlenir; bize gönderilmez, reklam için kullanılmaz. Ücretsiz sürüm Unity LevelPlay üzerinden reklam gösterir; reklam ortakları reklam kimliği ve IP adresi gibi cihaz verilerini işler. Ayrıntılar: <a href="index.html">Gizlilik Politikası</a> · <a href="kvkk.html">KVKK Aydınlatma Metni</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Verilerimi nasıl silerim, kişiselleştirilmiş reklamı nasıl kapatırım?</div>
+      <div class="answer">Ayarlar › Tüm Verileri Sil, cihazdaki her şeyi siler (uygulamayı kaldırmak da siler). Reklamlar için Ayarlar › Gizlilik Seçenekleri'nden "kişiselleştirilmemiş"i seçin; iPhone'da izleme iznini iOS Ayarları'ndan da değiştirebilirsiniz. Her türlü veri talebi için <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> adresine yazın; 30 gün içinde ücretsiz cevaplarız.</div>
     </div>
   </div>
 
@@ -157,6 +177,11 @@
       <div class="question">如何添加新习惯？</div>
       <div class="answer">点击主屏幕上的“+”按钮，选择您的习惯类型，设定您的目标，然后保存。</div>
     </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 StreakFlow · Veri sorumlusu ve geliştirici: Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="index.html">Gizlilik</a> · <a href="kvkk.html">KVKK Aydınlatma Metni</a> · <a href="termsofuse.html">Kullanım Koşulları</a> · <a href="support.html">Destek</a> · <a href="faq.html">SSS</a></p>
+    <p>© 2026 StreakFlow · Data controller &amp; developer: Mehmet Fatih İçin · <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a> · <a href="index.html">Privacy</a> · <a href="kvkk.html">KVKK Notice</a> · <a href="termsofuse.html">Terms</a> · <a href="support.html">Support</a> · <a href="faq.html">FAQ</a></p>
   </div>
 
   <script>
