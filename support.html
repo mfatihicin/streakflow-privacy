@@ -38,6 +38,12 @@
     .arrow { color: var(--text-muted); font-weight: bold; }
     .legal { text-align: left; background-color: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; font-size: 14px; color: var(--text-muted); }
     .legal p { font-size: 14px; margin: 0 0 6px; }
+    .del { margin-bottom: 16px; }
+    .del h2 { font-size: 20px; margin: 0 0 10px; color: var(--text); }
+    .del h3 { font-size: 15px; margin: 14px 0 6px; color: var(--text); }
+    .del ul { padding-left: 20px; margin: 0 0 8px; }
+    .del li { margin-bottom: 6px; }
+    .del strong, .del em { color: var(--text); }
     .date { font-size: 13px; color: var(--text-muted); }
     .lang { font-size: 14px; margin-bottom: 24px; }
     .footer { margin-top: 48px; font-size: 13px; color: var(--text-muted); }
@@ -45,7 +51,7 @@
   </style>
 </head>
 <body>
-  <div class="lang"><a href="#tr">Türkçe</a> · <a href="#en">English</a></div>
+  <div class="lang"><a href="#tr">Türkçe</a> · <a href="#en">English</a> · <a href="#veri-silme">Veri silme</a> · <a href="#data-deletion">Data deletion</a></div>
 
   <!-- TÜRKÇE -->
   <section id="tr">
@@ -77,13 +83,37 @@
       <div class="arrow">➔</div>
     </a>
 
+    <div class="legal del" id="veri-silme">
+      <h2>🗑️ Veri silme</h2>
+      <p>StreakFlow'da hesap yoktur ve bizim sunucumuz yoktur. Alışkanlıkların, seri ve ruh hali kayıtların, ilerleme fotoğrafların yalnızca cihazında durur; biz bunları göremeyiz ve senin yerine silemeyiz.</p>
+      <h3>Cihazındaki veriler</h3>
+      <ul>
+        <li><strong>Alışkanlıklar:</strong> Ayarlar › Veri › <em>Tüm Verileri Sil</em> bütün alışkanlıkları ve tamamlama kayıtlarını kalıcı olarak siler. Tek bir alışkanlığı silince ona ait ilerleme fotoğrafları da silinir.</li>
+        <li><strong>Her şey:</strong> ruh hali kayıtları, ilerleme fotoğrafları, rozetler ve ayarlar dahil tamamen silmek için <strong>uygulamayı kaldır</strong>; cihazdaki tüm uygulama verileri silinir.</li>
+        <li><strong>Android otomatik yedeği:</strong> Google yedeklemesi açıksa alışkanlık verilerin ve tercihlerin <strong>kendi Google hesabındaki</strong> yedekte de bulunur (fotoğraflar hariç). Kapatmak ve silmek için Android Ayarlar › Google › Yedekleme; yedekler Google Drive uygulamasındaki Yedekler bölümünden de silinebilir.</li>
+        <li><strong>iPhone:</strong> iCloud Yedekleme açıksa uygulama verileri iPhone'un kendi iCloud yedeğinde de bulunabilir; bu yedek Apple ile senin aranda tutulur.</li>
+        <li><strong>Kendi aldığın yedekler:</strong> Ayarlar › Veri › <em>Verileri Yedekle</em> veya <em>Verileri Dışa Aktar</em> ile kaydettiğin dosyalar kaydettiğin yerde kalır; onları sen silersin.</li>
+        <li><strong>Sağlık verileri:</strong> Apple Sağlık'a yazılan su kayıtları Sağlık uygulamasında kalır; oradan silebilir, izinleri Sağlık › Paylaşım › Uygulamalar › StreakFlow'dan kaldırabilirsin. Health Connect'ten yalnız adım okunur, oraya veri yazılmaz.</li>
+      </ul>
+      <h3>Reklam ve satın alma ortaklarındaki veriler</h3>
+      <ul>
+        <li>Ücretsiz sürümde Unity LevelPlay ve aracılık ettiği reklam ağları sınırlı cihaz verilerini (reklam kimliği, IP'den yaklaşık konum, reklam etkileşimleri) işler; alışkanlık ve sağlık verilerin onlara gitmez.</li>
+        <li><strong>Reklam rızasını geri al:</strong> Ayarlar › Gizlilik › <em>Gizlilik Seçenekleri</em> → "Kabul etmiyorum". Reklam görmeye devam edersin ama reklamlar kişiselleştirilmez.</li>
+        <li><strong>iPhone:</strong> Ayarlar › Gizlilik ve Güvenlik › İzleme'den StreakFlow'un iznini kapat. <strong>Android:</strong> Ayarlar › Google › Reklamlar › <em>Reklam kimliğini sil</em> (bazı telefonlarda Ayarlar › Gizlilik › Reklamlar).</li>
+        <li><strong>Premium:</strong> Premium'da reklam altyapısı hiç başlatılmaz; reklam ortaklarına yeni veri gitmez.</li>
+        <li><strong>Satın alma kayıtları:</strong> Premium aldıysan RevenueCat rastgele bir uygulama kimliği ve satın alma kaydı tutar. Talep edersen bu kayıtların silinmesini, mümkün olan ölçüde, RevenueCat'ten isteriz (kaydı bulmak için Apple / Google makbuzundaki sipariş numarasını isteyebiliriz). Satın almanın kendisi Apple veya Google hesabında kalır.</li>
+      </ul>
+      <h3>Silme talebi</h3>
+      <p><a href="mailto:support@mfatihicin.com?subject=StreakFlow%20%E2%80%93%20Veri%20silme">support@mfatihicin.com</a> adresine yaz ya da uygulamada Ayarlar › Gizlilik › <em>Veri talebi (KVKK/GDPR)</em>'ye dokun. En geç 30 gün içinde ücretsiz cevap veririz. Yazışma, cevap verdiğimizi ispat için en fazla 3 yıl saklanır.</p>
+    </div>
+
     <div class="legal">
       <p><strong>Veri sorumlusu ve geliştirici:</strong> Mehmet Fatih İçin (gerçek kişi, bağımsız uygulama geliştiricisi, Türkiye)</p>
       <p><strong>E-posta:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></p>
       <p><strong>Yazışma adresi / KEP:</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</p>
       <p><strong>İnternet sitesi:</strong> <a href="https://mfatihicin.com">https://mfatihicin.com</a></p>
       <p><a href="index.html">Gizlilik Politikası</a> · <a href="kvkk.html">KVKK Aydınlatma Metni</a> · <a href="termsofuse.html">Kullanım Koşulları</a></p>
-      <p class="date">Son güncelleme: 8 Kasım 2026 — iletişim adresi support@mfatihicin.com oldu; yasal bilgiler ve KVKK bağlantısı eklendi.</p>
+      <p class="date">Son güncelleme: 8 Kasım 2026 — iletişim adresi support@mfatihicin.com oldu; yasal bilgiler, KVKK bağlantısı ve veri silme bölümü eklendi.</p>
     </div>
   </section>
 
@@ -116,13 +146,37 @@
       <div class="arrow">➔</div>
     </a>
 
+    <div class="legal del" id="data-deletion">
+      <h2>🗑️ Data deletion</h2>
+      <p>StreakFlow has no accounts and we have no server. Your habits, streak and mood records and progress photos stay only on your device; we cannot see them or delete them for you.</p>
+      <h3>On your device</h3>
+      <ul>
+        <li><strong>Habits:</strong> Settings › Data › <em>Delete All Data</em> permanently deletes all habits and their completion records. Deleting a single habit also deletes its progress photos.</li>
+        <li><strong>Everything:</strong> to remove everything, including mood records, progress photos, badges and settings, <strong>uninstall the app</strong>; all app data on the device is deleted.</li>
+        <li><strong>Android Auto Backup:</strong> if Google backup is on, your habit data and preferences are also in the backup in <strong>your own Google account</strong> (photos excluded). To turn it off and delete it, use Android Settings › Google › Backup; backups can also be deleted under Backups in the Google Drive app.</li>
+        <li><strong>iPhone:</strong> if iCloud Backup is on, app data may also be in your iPhone's own iCloud backup; that backup is between you and Apple.</li>
+        <li><strong>Backups you made:</strong> files saved with Settings › Data › <em>Backup Data</em> or <em>Export Data</em> stay wherever you saved them; you delete them yourself.</li>
+        <li><strong>Health data:</strong> water entries written to Apple Health stay in the Health app; delete them there and remove access under Health › Sharing › Apps › StreakFlow. Health Connect is only read (steps); nothing is written to it.</li>
+      </ul>
+      <h3>Data held by ad and purchase partners</h3>
+      <ul>
+        <li>In the free version, Unity LevelPlay and the ad networks it mediates process limited device data (advertising ID, approximate location from the IP address, ad interactions); your habit and health data are never sent to them.</li>
+        <li><strong>Withdraw ad consent:</strong> Settings › Privacy › <em>Privacy Options</em> → "I don't accept". You will still see ads, but they are not personalized.</li>
+        <li><strong>iPhone:</strong> turn off StreakFlow under Settings › Privacy &amp; Security › Tracking. <strong>Android:</strong> Settings › Google › Ads › <em>Delete advertising ID</em> (on some phones Settings › Privacy › Ads).</li>
+        <li><strong>Premium:</strong> with Premium the ad SDK is never started, so no new data goes to ad partners.</li>
+        <li><strong>Purchase records:</strong> if you bought Premium, RevenueCat keeps a random app user ID and the purchase record. On request we ask RevenueCat to delete them where possible (we may ask for the order number on your Apple / Google receipt). The purchase itself stays in your Apple or Google account.</li>
+      </ul>
+      <h3>Deletion requests</h3>
+      <p>E-mail <a href="mailto:support@mfatihicin.com?subject=StreakFlow%20%E2%80%93%20Data%20deletion">support@mfatihicin.com</a> or tap Settings › Privacy › <em>Contact about my data</em> in the app. We answer free of charge within 30 days at the latest. The correspondence is kept for up to 3 years as proof that we answered.</p>
+    </div>
+
     <div class="legal">
       <p><strong>Data controller &amp; developer:</strong> Mehmet Fatih İçin (natural person, independent app developer, Türkiye)</p>
       <p><strong>E-mail:</strong> <a href="mailto:support@mfatihicin.com">support@mfatihicin.com</a></p>
       <p><strong>Postal address / KEP (registered e-mail):</strong> [YAZIŞMA ADRESİ / KEP — eklenecek]</p>
       <p><strong>Website:</strong> <a href="https://mfatihicin.com">https://mfatihicin.com</a></p>
       <p><a href="index.html">Privacy Policy</a> · <a href="kvkk.html">KVKK Notice</a> · <a href="termsofuse.html">Terms of Use</a></p>
-      <p class="date">Last updated: 8 November 2026 — contact address is now support@mfatihicin.com; legal information and KVKK link added.</p>
+      <p class="date">Last updated: 8 November 2026 — contact address is now support@mfatihicin.com; legal information, KVKK link and data deletion section added.</p>
     </div>
   </section>
 
